@@ -18,7 +18,6 @@ class UserController {
 
   async store(req: Request, res: Response): Promise<Response> {
     const user = await getCustomRepository(UserRepository).create(req.body)
-    console.log(user)
     return res.json(user)
   }
 
